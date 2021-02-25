@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-public class DelayConsumer {
+public class DelayConsumer2 {
     public static void main(String[] args) throws MQClientException {
         // Instantiate with specified consumer group name.
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("DelayConsumer");

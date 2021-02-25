@@ -27,11 +27,11 @@ import java.text.SimpleDateFormat;
 public class DelayProducer {
     public static void main(String[] args) throws MQClientException, InterruptedException {
 
-        DefaultMQProducer producer = new DefaultMQProducer("ProducerGroupName");
-        producer.setNamesrvAddr("192.168.44.163:9876;192.168.44.164:9876");
+        DefaultMQProducer producer = new DefaultMQProducer("DelayProducer");
+        producer.setNamesrvAddr("172.30.66.2:9876");
         producer.start();
 
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 20; i++) {
             SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
             String content = "发送时间：" + sf.format(System.currentTimeMillis());
             try {
